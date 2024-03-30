@@ -1,0 +1,45 @@
+{% extends 'aplicacion/index.html' %}
+
+
+{% block titulo %}
+
+<h3 class="display-4 fw-bolder">JUEGOS</h3>
+
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h3 class="display-4 fw-bolder">Consolas</h3>
+            <p class="lead fw-normal text-white-50 mb-0">👾</p>
+        </div>
+    </div>
+</header> 
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Empresa</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in consolas  %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.empresa }}</td>
+            <td>{{ c.cantidad }}</td>
+        </tr>
+    {% endfor %}
+    </tbody> 
+</table>
+
+{% endblock contenido %}
+    

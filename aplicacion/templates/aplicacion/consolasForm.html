@@ -1,0 +1,21 @@
+{% extends 'aplicacion/index.html' %}
+
+
+{% block titulo %}
+
+<h3 class="display-4 fw-bolder">Consolas (formularios) </h3>
+
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<form action="" method="post">
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Guardar">
+
+</form>    
+
+{% endblock contenido %}
